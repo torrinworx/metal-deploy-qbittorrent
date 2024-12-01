@@ -16,7 +16,7 @@ mv qBittorrent-release-5.0.2 qBittorrent
 
 mkdir -p qBittorrent/build
 cd qBittorrent
-cmake -B build -DCMAKE_BUILD_TYPE=Release
+cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/cmake
 cmake --build build
 
 cd ..
