@@ -17,4 +17,7 @@ exec qbittorrent-nox --webui-port=8080 --webui-root=./vuetorrent
 EOF
 
 chmod +x ./build/run.sh
+
+chown -R metal_deploy_qbittorrent:metal_deploy_qbittorrent /home/metal_deploy_qbittorrent
+
 echo "Build complete. Run './build/run.sh' to start qBittorrent with VueTorrent UI."
