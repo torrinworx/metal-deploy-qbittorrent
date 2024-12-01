@@ -6,7 +6,8 @@ apt update
 apt install -y qbittorrent-nox unzip wget
 wget https://github.com/VueTorrent/VueTorrent/releases/download/v2.18.0/vuetorrent.zip
 
-mkdir -p ./.config
+mkdir -p /home/metal_deploy_qbittorrent/.config
+
 mkdir -p ./build/vuetorrent
 unzip vuetorrent.zip -d ./build/vuetorrent
 rm vuetorrent.zip
