@@ -15,7 +15,7 @@ rm vuetorrent.zip
 cat <<'EOF' > ./build/run.sh
 #!/bin/bash
 
-exec qbittorrent-nox --webui-port=8080 --webui-root=./vuetorrent
+exec yes y | qbittorrent-nox
 EOF
 
 chmod +x ./build/run.sh
