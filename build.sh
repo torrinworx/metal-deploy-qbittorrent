@@ -7,6 +7,8 @@ apt install -y build-essential pkg-config libboost-system-dev \
 	qt6-base-dev qt6-tools-dev qt6-tools-dev-tools qt6-svg-dev \
 	zlib1g-dev python3 libtorrent-rasterbar-dev cmake
 
+export CMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6
+
 rm -rf qBittorrent
 rm -rf qBittorrent-release-5.0.2
 
