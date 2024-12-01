@@ -15,14 +15,10 @@ rm vuetorrent.zip
 # Path to the qBittorrent config
 CONFIG_FILE="/home/metal_deploy_qbittorrent/.config/qBittorrent/qBittorrent.conf"
 
-# Set default username and password if they do not exist
-if ! grep -q "WebUI\\Username=" "$CONFIG_FILE"; then
-	echo "WebUI\\Username=admin" >> "$CONFIG_FILE"
-fi
-
-if ! grep -q "WebUI\\Password_ha1=" "$CONFIG_FILE"; then
-	# SHA1 hash for the password "password"
-	echo "WebUI\\Password_ha1=5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8" >> "$CONFIG_FILE"
+# Pre-set the PBKDF2 password hash
+if ! grep -q "WebUI\\Password_PBKDF2=" "$CONFIG_FILE"; then
+    echo '[Preferences]' > "$CONFIG_FILE"
+    echo 'WebUI\Password_PBKDF2=@ByteArray(ARQ77eY1NUZaQsuDHbIMCA==:0WMRkYTUWVT9wVvdDtHAjU9b3b7uB8NR1Gur2hmQCvCDpm39Q+PsJRJPaCU51dEiz+dTzh8qbPsL8WkFljQYFQ==)' >> "$CONFIG_FILE"
 fi
 
 cat <<'EOF' > ./build/run.sh
