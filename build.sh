@@ -8,7 +8,7 @@ apt install -y build-essential pkg-config libboost-system-dev \
 	libboost-chrono-dev libboost-random-dev libssl-dev \
 	qtbase5-dev qttools5-dev qttools5-dev-tools \
 	libqt5svg5-dev zlib1g-dev python3 \
-	libtorrent-rasterbar-dev 
+	libtorrent-rasterbar-dev cmake
 
 # Download qBittorrent source code
 wget https://github.com/qbittorrent/qBittorrent/archive/refs/tags/release-5.0.2.tar.gz -O ./qBittorrent.tar.gz
