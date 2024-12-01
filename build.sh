@@ -16,7 +16,8 @@ wget "https://github.com/qbittorrent/qBittorrent/archive/refs/tags/release-5.0.2
 tar -xvzf ./qBittorrent.tar.gz -C ./
 cd qBittorrent-release-5.0.2
 
-qmake qBittorrent.pro
+./configure --disable-gui | true
+qmake qBittorrent.pro || true
 make
 make install INSTALL_ROOT=$HOME/.local
 
